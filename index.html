@@ -19,14 +19,44 @@
                     <option value="">Select a source...</option>
                 </select>
             </div>
-
+            <div class="translation-controls">
+                <label><input type="checkbox" id="enableTranslation"> Enable Translation</label>
+                <div id="translationOptions" style="display:none;">
+                    <label for="sourceLang">Source Language:</label>
+                    <select id="sourceLang">
+                        <option value="en">English</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="it">Italian</option>
+                        <option value="jp">Japanese</option>
+                        <option value="zh">Chinese</option>
+                        <option value="ru">Russian</option>
+                        <!-- Add more as needed -->
+                    </select>
+                    <label for="targetLang">Target Language:</label>
+                    <select id="targetLang">
+                        <option value="es">Spanish</option>
+                        <option value="en">English</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="it">Italian</option>
+                        <option value="zh">Chinese</option>
+                        <!-- Add more as needed -->
+                    </select>
+                </div>
+            </div>
             <button id="startButton" disabled>Start Transcription</button>
             <button id="stopButton" disabled>Stop Transcription</button>
         </div>
 
         <div class="transcription-container">
-            <h2>Transcription</h2>
+            <h2 id="transcriptionTitle">Transcription</h2>
             <div id="transcription" class="transcription-text"></div>
+        </div>
+        <div class="translation-container" style="display:none;">
+            <h2>Translation</h2>
+            <div id="translation" class="transcription-text"></div>
         </div>
     </div>
     <script src="app.js"></script>
