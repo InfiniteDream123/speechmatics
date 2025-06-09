@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speechmatics Real-time Transcription</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Real-time Transcription</h1>
+
+        <div class="controls">
+            <div class="audio-source">
+                <label for="audioSource">Select Audio Source:</label>
+                <select id="audioSource">
+                    <option value="">Select a source...</option>
+                </select>
+            </div>
+
+            <button id="startButton" disabled>Start Transcription</button>
+            <button id="stopButton" disabled>Stop Transcription</button>
+        </div>
+
+        <div class="transcription-container">
+            <h2>Transcription</h2>
+            <div id="transcription" class="transcription-text"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

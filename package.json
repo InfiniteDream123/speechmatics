@@ -1,0 +1,12 @@
+{
+  "name": "speechmatics-realtime-transcription",
+  "version": "1.0.0",
+  "description": "Real-time audio transcription using Speechmatics API",
+  "main": "app.js",
+  "scripts": {
+    "start": "http-server -c-1"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+} 
