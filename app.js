@@ -82,6 +82,7 @@ if (enableTranslation) {
         translationOptions.style.display = translationEnabled ? '' : 'none';
         translationContainer.style.display = translationEnabled ? '' : 'none';
         transcriptionContainer.style.display = translationEnabled ? 'none' : '';
+        transcriptionTitle.style.display = translationEnabled ? 'none' : '';
     });
 }
 
@@ -134,12 +135,12 @@ async function initializeWebSocket() {
                 const newPartialText = data.results
                     .map(r => r.alternatives?.[0].content)
                     .join(' ');
-                updatePartialTranscription(newPartialText);
+                updateTranscription(newPartialText, true);
             } else if (data.message === 'AddTranscript') {
                 const text = data.results
                     .map(r => r.alternatives?.[0].content)
                     .join(' ');
-                updateFinalTranscription(text);
+                updateTranscription(text, false);
             }
         }
         if (data.message === 'EndOfTranscript') {
